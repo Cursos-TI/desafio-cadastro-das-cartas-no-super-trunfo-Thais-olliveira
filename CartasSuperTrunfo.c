@@ -10,14 +10,12 @@ int main() {
     float area, area2, pib, pib2, densidade_populacional, densidade_populacional2, pibpercapta, pibpercapta2;
     float superpoder1, superpoder2;
     int resultadosuper;
-
-    //Mestre: Transformação da variavel de população
-    unsigned long int populacao, populacao2;
+    unsigned long int populacao, populacao2; //Mestre: Transformação da variavel de população
 
     //Solicitação e armazenamento dos dados para a primeira carta.
 
-    printf ("**Digite os dados da primeira carta** \n Digite uma letra de 'A' a 'H' (representando um dos oito estados): \n");
-    scanf ("%s", estado); // O & (operador de endereço) não é usado com %s.
+    printf("**Digite os dados da primeira carta** \n Digite uma letra de 'A' a 'H' (representando um dos oito estados): \n");
+    scanf("%s", estado); // O & (operador de endereço) não é usado com %s.
 
     printf ("Código (digite a letra do estado seguida de um número de 01 a 04): \n");
     scanf ("%s", codigo); //use %s ao invés de %c, pois isso simboliza que você esta utilizando uma string.
@@ -124,12 +122,12 @@ int main() {
             if (pibpercapta > pibpercapta2)
         printf ("\n PIB per capita: Carta 1 venceu");
             else
-        printf ("\n PIB per capita: Carta 2 venceu");
+        printf ("\n PIB per capita: Carta 2 venceu"); 
 
-        // Calcular o super poder
+        // Calcular o super poder // Conversão de int para float (pontos turisticos);
 
-        superpoder1 = populacao + area + pib + pontos_turisticos + pibpercapta + (1/densidade_populacional);
-        superpoder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + pibpercapta2 + (1/densidade_populacional2);
+        superpoder1 = populacao + area + pib + (float)pontos_turisticos + pibpercapta + (1/densidade_populacional);
+        superpoder2 = populacao2 + area2 + pib2 + (float)pontos_turisticos2 + pibpercapta2 + (1/densidade_populacional2);
         resultadosuper = superpoder1 > superpoder2;
 
             if (resultadosuper = 1)
