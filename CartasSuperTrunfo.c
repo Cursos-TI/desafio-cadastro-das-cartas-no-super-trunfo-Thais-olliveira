@@ -90,10 +90,9 @@ int main() {
         printf ("Densidade Populacional:%.2f hab/km²\n", densidade_populacional2);
         printf ("PIB per capita:%.2f reais\n", pibpercapta2);
   
-        // Calcular comparação de cartas
-        /*resultadopop, resultadoarea, resultadopib, resultadopt, 
-        resultadodensidadepopulacional, resultadopibpercapita;*/
-
+    
+     // Calcular comparação de cartas, a carta com maior valor ganha, exceto densidade populacional
+    
       printf ("\nComparação de cartas: \n");
 
         resultadopop = (populacao > populacao2);
@@ -121,6 +120,22 @@ int main() {
         
         resultadosuper = superpoder1 > superpoder2;
         printf ("Super Poder: %d \n", resultadosuper);
+
+    //Comparando cartas do Super Trunfo, o valor da população da carta 1 com população da carta 2
+    
+
+    printf ("\nComparação de cartas (Atributo: População) \n");
+
+    printf("\nCarta 1 - (%s): %lu", cidade, populacao);
+    printf("\nCarta 2 - (%s): %lu", cidade2, populacao2);
+
+//Exibe o resultado de qual das cartas ganhou com maior valor para a variavel população
+
+        if (populacao > populacao2){
+    printf("\n Resultado: Carta 1 (%s) venceu!", cidade);
+    } else {
+    printf("\nResultado: Carta 2 (%s) venceu", cidade2);
+    }
 
     return 0;
 }
